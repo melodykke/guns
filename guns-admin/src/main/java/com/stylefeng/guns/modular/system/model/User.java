@@ -34,6 +34,10 @@ public class User extends Model<User> {
      * 账号
      */
 	private String account;
+	/**
+	 * 业主名
+	 */
+	private String pname;
     /**
      * 密码
      */
@@ -95,6 +99,14 @@ public class User extends Model<User> {
 	public void setAccount(String account) {
 		this.account = account;
 	}
+
+    public String getPname() {
+        return pname;
+    }
+
+    public void setPname(String pname) {
+        this.pname = pname;
+    }
 
 	public String getPassword() {
 		return password;
@@ -179,6 +191,7 @@ public class User extends Model<User> {
 			"id=" + id +
 			", avatar=" + avatar +
 			", account=" + account +
+            ", pname=" + pname +
 			", password=" + password +
 			", salt=" + salt +
 			", name=" + name +
@@ -190,4 +203,6 @@ public class User extends Model<User> {
 			", version=" + version +
 			"}";
 	}
+
+
 }
