@@ -14,14 +14,15 @@ public class UserDto{
 
 	private Integer id;
 	private String account;
+	private String pname;
 	private String password;
 	private String salt;
 	private String name;
 
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+/*	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date birthday;
 	private Integer sex;
-	private String email;
+	private String email;*/
 	private String phone;
 	private String roleid;
 	private Integer deptid;
@@ -47,6 +48,15 @@ public class UserDto{
 		this.account = account;
 	}
 
+
+	public String getPname() {
+		return pname;
+	}
+
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+
 	public String getPassword() {
 		return password;
 	}
@@ -69,30 +79,6 @@ public class UserDto{
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Date getBirthday() {
-		return birthday;
-	}
-
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
-
-	public Integer getSex() {
-		return sex;
-	}
-
-	public void setSex(Integer sex) {
-		this.sex = sex;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public String getPhone() {
@@ -150,4 +136,5 @@ public class UserDto{
 	public void setAvatar(String avatar) {
 		this.avatar = avatar;
 	}
+
 }

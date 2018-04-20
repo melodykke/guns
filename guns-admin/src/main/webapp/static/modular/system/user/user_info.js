@@ -142,8 +142,8 @@ UserInfoDlg.hideDeptSelectTree = function () {
  * 收集数据
  */
 UserInfoDlg.collectData = function () {
-    this.set('id').set('account').set('sex').set('password').set('avatar')
-        .set('email').set('name').set('birthday').set('rePassword').set('deptid').set('phone');
+    this.set('id').set('account').set('pname').set('password').set('avatar')
+        .set('name').set('rePassword').set('deptid').set('phone');
 };
 
 /**
