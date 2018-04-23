@@ -1,0 +1,78 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="${item.id}">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="" value="${item.id}" underline="true"/>
+                            <#input id="title" name="第一表格名" value="${item.title}" underline="true"/>
+                            <#input id="projectName" name="工程名称" value="${item.projectName}" underline="true"/>
+                            <#input id="constructionContent" name="建设内容" value="${item.constructionContent}" underline="true"/>
+                            <#input id="monthCivilCost" name="本月完成投资土建及金结" value="${item.monthCivilCost}" underline="true"/>
+                            <#input id="monthElectricalCost" name="本月完成投资机电设备及安装" value="${item.monthElectricalCost}" underline="true"/>
+                            <#input id="monthIndependentCost" name="独立费用" value="${item.monthIndependentCost}" underline="true"/>
+                            <#input id="monthEnvironmentCost" name="移民、环境及水保" value="${item.monthEnvironmentCost}" underline="true"/>
+                            <#input id="monthOtherCost" name="其他" value="${item.monthOtherCost}" underline="true"/>
+                            <#input id="yearCivilCost" name="本年度累计完成投资土建及金结" value="${item.yearCivilCost}" underline="true"/>
+                            <#input id="yearElectricalCost" name="本年度累计完成投资机电设备及安装" value="${item.yearElectricalCost}" underline="true"/>
+                            <#input id="yearIndependentCost" name="独立费用" value="${item.yearIndependentCost}" underline="true"/>
+                            <#input id="yearEnvironmentCost" name="移民、环境及水保" value="${item.yearEnvironmentCost}" underline="true"/>
+                            <#input id="yearOtherCost" name="其他" value="${item.yearOtherCost}" underline="true"/>
+                            <#input id="sofarCivilCost" name="至今累计完成投资土建及金结" value="${item.sofarCivilCost}" underline="true"/>
+                            <#input id="sofarElectricalCost" name="至今累计完成投资机电设备及安装" value="${item.sofarElectricalCost}" underline="true"/>
+                            <#input id="sofarIndependentCost" name="独立费用" value="${item.sofarIndependentCost}" underline="true"/>
+                            <#input id="sofarEnvironmentCost" name="移民、环境及水保" value="${item.sofarEnvironmentCost}" underline="true"/>
+                            <#input id="sofarOtherCost" name="其他" value="${item.sofarOtherCost}" underline="true"/>
+                            <#input id="monthEarthworkExcavation" name="本月完成土石方明挖" value="${item.monthEarthworkExcavation}" underline="true"/>
+                            <#input id="monthHoleworkExcavation" name="本月完成土石方洞挖" value="${item.monthHoleworkExcavation}" underline="true"/>
+                            <#input id="monthEarthworkBackfill" name="本月完成土石方回填" value="${item.monthEarthworkBackfill}" underline="true"/>
+                            <#input id="monthMasonry" name="本月完成砌石" value="${item.monthMasonry}" underline="true"/>
+                            <#input id="monthConcrete" name="本月完成混凝土" value="${item.monthConcrete}" underline="true"/>
+                            <#input id="monthRebar" name="本月完成钢筋" value="${item.monthRebar}" underline="true"/>
+                            <#input id="monthGrout" name="本月完成灌浆" value="${item.monthGrout}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="yearEarthworkExcavation" name="年度完成土石方明挖" value="${item.yearEarthworkExcavation}" underline="true"/>
+                            <#input id="yearHoleworkExcavation" name="年度完成土石方洞挖" value="${item.yearHoleworkExcavation}" underline="true"/>
+                            <#input id="yearEarthworkBackfill" name="年度完成土石方回填" value="${item.yearEarthworkBackfill}" underline="true"/>
+                            <#input id="yearMasonry" name="年度完成砌石" value="${item.yearMasonry}" underline="true"/>
+                            <#input id="yearConcrete" name="年度完成混凝土" value="${item.yearConcrete}" underline="true"/>
+                            <#input id="yearRebar" name="年度完成钢筋" value="${item.yearRebar}" underline="true"/>
+                            <#input id="yearGrout" name="年度完成灌浆" value="${item.yearGrout}" underline="true"/>
+                            <#input id="sofarEarthworkExcavation" name="至今完成土石方明挖" value="${item.sofarEarthworkExcavation}" underline="true"/>
+                            <#input id="sofarHoleworkExcavation" name="至今完成土石方洞挖" value="${item.sofarHoleworkExcavation}" underline="true"/>
+                            <#input id="sofarEarthworkBackfill" name="至今完成土石方回填" value="${item.sofarEarthworkBackfill}" underline="true"/>
+                            <#input id="sofarMasonry" name="至今完成砌石" value="${item.sofarMasonry}" underline="true"/>
+                            <#input id="sofarConcrete" name="至今完成混凝土" value="${item.sofarConcrete}" underline="true"/>
+                            <#input id="sofarRebar" name="至今完成钢筋" value="${item.sofarRebar}" underline="true"/>
+                            <#input id="sofarGrout" name="至今完成灌浆" value="${item.sofarGrout}" underline="true"/>
+                            <#input id="laborForce" name="劳动力投入（万工日）" value="${item.laborForce}" underline="true"/>
+                            <#input id="progress" name="工程形象进度及节点工期" value="${item.progress}" underline="true"/>
+                            <#input id="difficulty" name="存在的困难及问题" value="${item.difficulty}" underline="true"/>
+                            <#input id="measure" name="采取的主要措施" value="${item.measure}" underline="true"/>
+                            <#input id="suggestion" name="下一步建议" value="${item.suggestion}" underline="true"/>
+                            <#input id="other" name="其他" value="${item.other}" underline="true"/>
+                            <#input id="principal" name="负责人" value="${item.principal}" underline="true"/>
+                            <#input id="informant" name="填报人" value="${item.informant}" underline="true"/>
+                            <#input id="telephone" name="联系电话" value="${item.telephone}" underline="true"/>
+                            <#input id="createTime" name="创建时间" value="${item.createTime}" underline="true"/>
+                            <#input id="updateTime" name="修改时间" value="${item.updateTime}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="SheetOneInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="SheetOneInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/mr_construction/sheetOne/sheetOne_info.js"></script>
+@}
