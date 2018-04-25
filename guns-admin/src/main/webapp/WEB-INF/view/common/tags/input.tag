@@ -9,8 +9,8 @@
     style : 附加的css属性
 @*/
 <div class="form-group">
-    <label class="col-sm-3 control-label">${name}</label>
-    <div class="col-sm-9">
+    <label class="col-sm-4 control-label">${name}</label>
+    <div class="col-sm-8">
         <input class="form-control" id="${id}" name="${id}"
                @if(isNotEmpty(value)){
                     value="${tool.dateType(value)}"

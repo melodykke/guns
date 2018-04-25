@@ -13,10 +13,10 @@ import com.stylefeng.guns.modular.system.model.SheetOne;
 import com.stylefeng.guns.modular.mr_construction.service.ISheetOneService;
 
 /**
- * 建设信息报表控制器
+ * 项目月报控制器
  *
  * @author fengshuonan
- * @Date 2018-04-23 10:49:54
+ * @Date 2018-04-23 17:22:35
  */
 @Controller
 @RequestMapping("/sheetOne")
@@ -28,7 +28,7 @@ public class SheetOneController extends BaseController {
     private ISheetOneService sheetOneService;
 
     /**
-     * 跳转到建设信息报表首页
+     * 跳转到项目月报首页
      */
     @RequestMapping("")
     public String index() {
@@ -36,7 +36,7 @@ public class SheetOneController extends BaseController {
     }
 
     /**
-     * 跳转到添加建设信息报表
+     * 跳转到添加项目月报
      */
     @RequestMapping("/sheetOne_add")
     public String sheetOneAdd() {
@@ -44,7 +44,7 @@ public class SheetOneController extends BaseController {
     }
 
     /**
-     * 跳转到修改建设信息报表
+     * 跳转到修改项目月报
      */
     @RequestMapping("/sheetOne_update/{sheetOneId}")
     public String sheetOneUpdate(@PathVariable Integer sheetOneId, Model model) {
@@ -55,7 +55,7 @@ public class SheetOneController extends BaseController {
     }
 
     /**
-     * 获取建设信息报表列表
+     * 获取项目月报列表
      */
     @RequestMapping(value = "/list")
     @ResponseBody
@@ -64,7 +64,7 @@ public class SheetOneController extends BaseController {
     }
 
     /**
-     * 新增建设信息报表
+     * 新增项目月报
      */
     @RequestMapping(value = "/add")
     @ResponseBody
@@ -74,7 +74,7 @@ public class SheetOneController extends BaseController {
     }
 
     /**
-     * 删除建设信息报表
+     * 删除项目月报
      */
     @RequestMapping(value = "/delete")
     @ResponseBody
@@ -84,7 +84,7 @@ public class SheetOneController extends BaseController {
     }
 
     /**
-     * 修改建设信息报表
+     * 修改项目月报
      */
     @RequestMapping(value = "/update")
     @ResponseBody
@@ -94,7 +94,7 @@ public class SheetOneController extends BaseController {
     }
 
     /**
-     * 建设信息报表详情
+     * 项目月报详情
      */
     @RequestMapping(value = "/detail/{sheetOneId}")
     @ResponseBody
@@ -103,7 +103,7 @@ public class SheetOneController extends BaseController {
     }
 
     /**
-     * 跳转到建设信息报表详情
+     * 跳转到修改项目月报
      */
     @RequestMapping("/sheetOne_view_detail/{sheetOneId}")
     public String sheetOneViewDetail(@PathVariable Integer sheetOneId, Model model) {

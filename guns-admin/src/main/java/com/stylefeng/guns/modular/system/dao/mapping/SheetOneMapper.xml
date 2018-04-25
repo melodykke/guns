@@ -8,16 +8,19 @@
         <result column="title" property="title" />
         <result column="project_name" property="projectName" />
         <result column="construction_content" property="constructionContent" />
+        <result column="month_total_cost" property="monthTotalCost" />
         <result column="month_civil_cost" property="monthCivilCost" />
         <result column="month_electrical_cost" property="monthElectricalCost" />
         <result column="month_independent_cost" property="monthIndependentCost" />
         <result column="month_environment_cost" property="monthEnvironmentCost" />
         <result column="month_other_cost" property="monthOtherCost" />
+        <result column="year_total_cost" property="yearTotalCost" />
         <result column="year_civil_cost" property="yearCivilCost" />
         <result column="year_electrical_cost" property="yearElectricalCost" />
         <result column="year_independent_cost" property="yearIndependentCost" />
         <result column="year_environment_cost" property="yearEnvironmentCost" />
         <result column="year_other_cost" property="yearOtherCost" />
+        <result column="sofar_total_cost" property="sofarTotalCost" />
         <result column="sofar_civil_cost" property="sofarCivilCost" />
         <result column="sofar_electrical_cost" property="sofarElectricalCost" />
         <result column="sofar_independent_cost" property="sofarIndependentCost" />
@@ -59,7 +62,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, title, project_name AS projectName, construction_content AS constructionContent, month_civil_cost AS monthCivilCost, month_electrical_cost AS monthElectricalCost, month_independent_cost AS monthIndependentCost, month_environment_cost AS monthEnvironmentCost, month_other_cost AS monthOtherCost, year_civil_cost AS yearCivilCost, year_electrical_cost AS yearElectricalCost, year_independent_cost AS yearIndependentCost, year_environment_cost AS yearEnvironmentCost, year_other_cost AS yearOtherCost, sofar_civil_cost AS sofarCivilCost, sofar_electrical_cost AS sofarElectricalCost, sofar_independent_cost AS sofarIndependentCost, sofar_environment_cost AS sofarEnvironmentCost, sofar_other_cost AS sofarOtherCost, month_earthwork_excavation AS monthEarthworkExcavation, month_holework_excavation AS monthHoleworkExcavation, month_earthwork_backfill AS monthEarthworkBackfill, month_masonry AS monthMasonry, month_concrete AS monthConcrete, month_rebar AS monthRebar, month_grout AS monthGrout, year_earthwork_excavation AS yearEarthworkExcavation, year_holework_excavation AS yearHoleworkExcavation, year_earthwork_backfill AS yearEarthworkBackfill, year_masonry AS yearMasonry, year_concrete AS yearConcrete, year_rebar AS yearRebar, year_grout AS yearGrout, sofar_earthwork_excavation AS sofarEarthworkExcavation, sofar_holework_excavation AS sofarHoleworkExcavation, sofar_earthwork_backfill AS sofarEarthworkBackfill, sofar_masonry AS sofarMasonry, sofar_concrete AS sofarConcrete, sofar_rebar AS sofarRebar, sofar_grout AS sofarGrout, labor_force AS laborForce, progress, difficulty, measure, suggestion, other, principal, informant, telephone, create_time AS createTime, update_time AS updateTime
+        id, title, project_name AS projectName, construction_content AS constructionContent, month_total_cost AS monthTotalCost, month_civil_cost AS monthCivilCost, month_electrical_cost AS monthElectricalCost, month_independent_cost AS monthIndependentCost, month_environment_cost AS monthEnvironmentCost, month_other_cost AS monthOtherCost, year_total_cost AS yearTotalCost, year_civil_cost AS yearCivilCost, year_electrical_cost AS yearElectricalCost, year_independent_cost AS yearIndependentCost, year_environment_cost AS yearEnvironmentCost, year_other_cost AS yearOtherCost, sofar_total_cost AS sofarTotalCost, sofar_civil_cost AS sofarCivilCost, sofar_electrical_cost AS sofarElectricalCost, sofar_independent_cost AS sofarIndependentCost, sofar_environment_cost AS sofarEnvironmentCost, sofar_other_cost AS sofarOtherCost, month_earthwork_excavation AS monthEarthworkExcavation, month_holework_excavation AS monthHoleworkExcavation, month_earthwork_backfill AS monthEarthworkBackfill, month_masonry AS monthMasonry, month_concrete AS monthConcrete, month_rebar AS monthRebar, month_grout AS monthGrout, year_earthwork_excavation AS yearEarthworkExcavation, year_holework_excavation AS yearHoleworkExcavation, year_earthwork_backfill AS yearEarthworkBackfill, year_masonry AS yearMasonry, year_concrete AS yearConcrete, year_rebar AS yearRebar, year_grout AS yearGrout, sofar_earthwork_excavation AS sofarEarthworkExcavation, sofar_holework_excavation AS sofarHoleworkExcavation, sofar_earthwork_backfill AS sofarEarthworkBackfill, sofar_masonry AS sofarMasonry, sofar_concrete AS sofarConcrete, sofar_rebar AS sofarRebar, sofar_grout AS sofarGrout, labor_force AS laborForce, progress, difficulty, measure, suggestion, other, principal, informant, telephone, create_time AS createTime, update_time AS updateTime
     </sql>
 
 </mapper>

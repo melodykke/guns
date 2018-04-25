@@ -14,27 +14,28 @@ var SheetOne = {
 SheetOne.initColumn = function () {
     return [
         {field: 'selectItem', radio: true},
-            {title: '表格名', field: 'title', visible: true, align: 'center', valign: 'middle'},
+            {title: '', field: 'id', visible: true, align: 'center', valign: 'middle'},
+            {title: '第一表格名', field: 'title', visible: true, align: 'center', valign: 'middle'},
             {title: '工程名称', field: 'projectName', visible: true, align: 'center', valign: 'middle'},
-            {title: '　　　建设内容　　　', field: 'constructionContent', visible: true, align: 'center', valign: 'middle'},
+            {title: '建设内容', field: 'constructionContent', visible: true, align: 'center', valign: 'middle'},
             {title: '月合计', field: 'monthTotalCost', visible: true, align: 'center', valign: 'middle'},
-           /* {title: '本月完成投资土建及金结', field: 'monthCivilCost', visible: true, align: 'center', valign: 'middle'},
+            {title: '本月完成投资土建及金结', field: 'monthCivilCost', visible: true, align: 'center', valign: 'middle'},
             {title: '本月完成投资机电设备及安装', field: 'monthElectricalCost', visible: true, align: 'center', valign: 'middle'},
             {title: '独立费用', field: 'monthIndependentCost', visible: true, align: 'center', valign: 'middle'},
             {title: '移民、环境及水保', field: 'monthEnvironmentCost', visible: true, align: 'center', valign: 'middle'},
-            {title: '其他', field: 'monthOtherCost', visible: true, align: 'center', valign: 'middle'},*/
+            {title: '其他', field: 'monthOtherCost', visible: true, align: 'center', valign: 'middle'},
             {title: '年合计', field: 'yearTotalCost', visible: true, align: 'center', valign: 'middle'},
-            /*{title: '本年度累计完成投资土建及金结', field: 'yearCivilCost', visible: true, align: 'center', valign: 'middle'},
+            {title: '本年度累计完成投资土建及金结', field: 'yearCivilCost', visible: true, align: 'center', valign: 'middle'},
             {title: '本年度累计完成投资机电设备及安装', field: 'yearElectricalCost', visible: true, align: 'center', valign: 'middle'},
             {title: '独立费用', field: 'yearIndependentCost', visible: true, align: 'center', valign: 'middle'},
             {title: '移民、环境及水保', field: 'yearEnvironmentCost', visible: true, align: 'center', valign: 'middle'},
-            {title: '其他', field: 'yearOtherCost', visible: true, align: 'center', valign: 'middle'},*/
+            {title: '其他', field: 'yearOtherCost', visible: true, align: 'center', valign: 'middle'},
             {title: '至今合计', field: 'sofarTotalCost', visible: true, align: 'center', valign: 'middle'},
-            /*{title: '至今累计完成投资土建及金结', field: 'sofarCivilCost', visible: true, align: 'center', valign: 'middle'},
+            {title: '至今累计完成投资土建及金结', field: 'sofarCivilCost', visible: true, align: 'center', valign: 'middle'},
             {title: '至今累计完成投资机电设备及安装', field: 'sofarElectricalCost', visible: true, align: 'center', valign: 'middle'},
             {title: '独立费用', field: 'sofarIndependentCost', visible: true, align: 'center', valign: 'middle'},
             {title: '移民、环境及水保', field: 'sofarEnvironmentCost', visible: true, align: 'center', valign: 'middle'},
-            {title: '其他', field: 'sofarOtherCost', visible: true, align: 'center', valign: 'middle'},*/
+            {title: '其他', field: 'sofarOtherCost', visible: true, align: 'center', valign: 'middle'},
             {title: '本月完成土石方明挖', field: 'monthEarthworkExcavation', visible: true, align: 'center', valign: 'middle'},
             {title: '本月完成土石方洞挖', field: 'monthHoleworkExcavation', visible: true, align: 'center', valign: 'middle'},
             {title: '本月完成土石方回填', field: 'monthEarthworkBackfill', visible: true, align: 'center', valign: 'middle'},
@@ -58,8 +59,8 @@ SheetOne.initColumn = function () {
             {title: '至今完成灌浆', field: 'sofarGrout', visible: true, align: 'center', valign: 'middle'},
             {title: '劳动力投入（万工日）', field: 'laborForce', visible: true, align: 'center', valign: 'middle'},
             {title: '工程形象进度及节点工期', field: 'progress', visible: true, align: 'center', valign: 'middle'},
-            {title: '存在的困难及问题', width:'20%', field: 'difficulty', visible: true, align: 'center', valign: 'middle'},
-            {title: '采取的主要措施',width:'20%', field: 'measure', visible: true, align: 'center', valign: 'middle'},
+            {title: '存在的困难及问题', field: 'difficulty', visible: true, align: 'center', valign: 'middle'},
+            {title: '采取的主要措施', field: 'measure', visible: true, align: 'center', valign: 'middle'},
             {title: '下一步建议', field: 'suggestion', visible: true, align: 'center', valign: 'middle'},
             {title: '其他', field: 'other', visible: true, align: 'center', valign: 'middle'},
             {title: '负责人', field: 'principal', visible: true, align: 'center', valign: 'middle'},
@@ -147,20 +148,3 @@ $(function () {
     table.setPaginationType("client");
     SheetOne.table = table.init();
 });
-
-/**
- * 打开查看项目月报详情
- */
-SheetOne.viewDetail = function () {
-    if (this.check()) {
-        var index = layer.open({
-            type: 2,
-            title: '项目月报详情',
-            area: ['800px', '420px'], //宽高
-            fix: false, //不固定
-            maxmin: true,
-            content: Feng.ctxPath + '/sheetOne/sheetOne_view_detail/' + SheetOne.seItem.id
-        });
-        this.layerIndex = index;
-    }
-};

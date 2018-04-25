@@ -41,6 +41,11 @@ public class SheetOne extends Model<SheetOne> {
     @TableField("construction_content")
     private String constructionContent;
     /**
+     * 月合计
+     */
+    @TableField("month_total_cost")
+    private BigDecimal monthTotalCost;
+    /**
      * 本月完成投资土建及金结
      */
     @TableField("month_civil_cost")
@@ -66,6 +71,11 @@ public class SheetOne extends Model<SheetOne> {
     @TableField("month_other_cost")
     private BigDecimal monthOtherCost;
     /**
+     * 年合计
+     */
+    @TableField("year_total_cost")
+    private BigDecimal yearTotalCost;
+    /**
      * 本年度累计完成投资土建及金结
      */
     @TableField("year_civil_cost")
@@ -90,6 +100,11 @@ public class SheetOne extends Model<SheetOne> {
      */
     @TableField("year_other_cost")
     private BigDecimal yearOtherCost;
+    /**
+     * 至今合计
+     */
+    @TableField("sofar_total_cost")
+    private BigDecimal sofarTotalCost;
     /**
      * 至今累计完成投资土建及金结
      */
@@ -301,6 +316,14 @@ public class SheetOne extends Model<SheetOne> {
         this.constructionContent = constructionContent;
     }
 
+    public BigDecimal getMonthTotalCost() {
+        return monthTotalCost;
+    }
+
+    public void setMonthTotalCost(BigDecimal monthTotalCost) {
+        this.monthTotalCost = monthTotalCost;
+    }
+
     public BigDecimal getMonthCivilCost() {
         return monthCivilCost;
     }
@@ -341,6 +364,14 @@ public class SheetOne extends Model<SheetOne> {
         this.monthOtherCost = monthOtherCost;
     }
 
+    public BigDecimal getYearTotalCost() {
+        return yearTotalCost;
+    }
+
+    public void setYearTotalCost(BigDecimal yearTotalCost) {
+        this.yearTotalCost = yearTotalCost;
+    }
+
     public BigDecimal getYearCivilCost() {
         return yearCivilCost;
     }
@@ -379,6 +410,14 @@ public class SheetOne extends Model<SheetOne> {
 
     public void setYearOtherCost(BigDecimal yearOtherCost) {
         this.yearOtherCost = yearOtherCost;
+    }
+
+    public BigDecimal getSofarTotalCost() {
+        return sofarTotalCost;
+    }
+
+    public void setSofarTotalCost(BigDecimal sofarTotalCost) {
+        this.sofarTotalCost = sofarTotalCost;
     }
 
     public BigDecimal getSofarCivilCost() {
@@ -689,16 +728,19 @@ public class SheetOne extends Model<SheetOne> {
         ", title=" + title +
         ", projectName=" + projectName +
         ", constructionContent=" + constructionContent +
+        ", monthTotalCost=" + monthTotalCost +
         ", monthCivilCost=" + monthCivilCost +
         ", monthElectricalCost=" + monthElectricalCost +
         ", monthIndependentCost=" + monthIndependentCost +
         ", monthEnvironmentCost=" + monthEnvironmentCost +
         ", monthOtherCost=" + monthOtherCost +
+        ", yearTotalCost=" + yearTotalCost +
         ", yearCivilCost=" + yearCivilCost +
         ", yearElectricalCost=" + yearElectricalCost +
         ", yearIndependentCost=" + yearIndependentCost +
         ", yearEnvironmentCost=" + yearEnvironmentCost +
         ", yearOtherCost=" + yearOtherCost +
+        ", sofarTotalCost=" + sofarTotalCost +
         ", sofarCivilCost=" + sofarCivilCost +
         ", sofarElectricalCost=" + sofarElectricalCost +
         ", sofarIndependentCost=" + sofarIndependentCost +
